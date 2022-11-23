@@ -1,0 +1,62 @@
+
+
+/* Titre */
+h1 {
+    display : block;
+    color: black;
+    opacity: 0.8;
+    align-content: center;
+    text-align: center;
+    background-color:ghostwhite;
+    border: 2px solid black;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    text-shadow: black;
+ }
+
+ /* Elements de recherche */
+ .pCol{
+     background-color:ghostwhite;
+     opacity: 0.8;
+     padding: 1%;
+     border: 2px solid black;
+ }
+
+ /*Titre du lieu*/
+ .mdTitle{
+     font-weight: bold;
+     text-align: right;
+
+ }
+  /*Contenu d'un lieu*/
+.content>*{
+     color: black;
+     visibility: initial;
+     text-align: right;
+ }
+
+  .pContent~p{
+    margin-top : 30px;
+ }
+
+  a{
+      text-decoration: none;
+  }
+
+ /*Tous les éléments*/
+ .placesContentMain{
+     display: inline;
+
+ }
+
+.pCol{
+    position: center;
+}
+
+ .picture{
+     position: absolute;
+ }
+
+
