@@ -30,7 +30,7 @@
                         <a href="{% url 'place_detail' slug=obj.slug %}">
                             <div class="pContent">
                                 <div class="picture">
-                                    <img src= "{{ obj.image.url }}"  alt="" width="210" height="160">
+                                    <p><img src="{{ obj.image.url }}" alt="..." class="pImg"></p>
                                 </div>
                                 <div class="content">
                                     <h3 class="mdTitle">{{ obj.name }}</h3>

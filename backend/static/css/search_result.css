@@ -55,6 +55,11 @@ h1 {
     position: center;
 }
 
+.pImg{
+    width: 230px;
+    height: 160px;
+}
+
  .picture{
      position: absolute;
  }
