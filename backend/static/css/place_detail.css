@@ -12,12 +12,10 @@
 
  }
 
-
  .col-md-8>a{
      text-decoration: none;
      color:black;
      font-weight: bold;
-
  }
 
   .post>a{
@@ -28,22 +26,40 @@
  }
 
   .return{
-      padding-top : 10px;
-      margin: 20%;
-  }
 
- .fav{
-      margin : 10%;
   }
 
 .pImg{
     width: 600px;
     height: 350px;
+
 }
 .picture{
     position: absolute;
+    opacity: 1;
 }
 
+
 .content{
-    margin:5%;
+   text-align: center;
+}
+
+.content>h1{
+    margin-left : 45%;
+}
+
+.content>h3{
+   margin-left : 45%;
+}
+
+.content>p{
+    margin-left : 45%;
+    color : black;
+}
+
+.content>a{
+    text-decoration: none;
+     color:black;
+    font-weight: bold;
+    margin-left : 45%;
 }
