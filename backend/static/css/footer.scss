@@ -1,0 +1,18 @@
+footer {
+  border-top: solid 1px;
+  background: rgba(150, 150, 150, 0.5);
+  width: 100%;
+  padding-top: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  color: #FFFFFF;
+
+  p {
+    font: 20px 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+  }
+}
