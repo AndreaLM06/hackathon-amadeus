@@ -17,21 +17,27 @@
 
 <!-- ===========Start Content=========== -->
 {% block content %}
-<div class="content container">
+<div class="content container" id="place">
+ <link href="{% static 'css/place_detail.css' %}" rel="stylesheet">
     <div class="row">
         <div class="col-md-8">
-            <a href="{{ request.META.HTTP_REFERER }}" class="buw3-border w3-border-blue" class>Retour</a>
+            <a href="{{ request.META.HTTP_REFERER }}" class="return" class>BACK</a>
             <div class="post">
+                <div class="picture">
+                    <p><img src="{{ place.image.url }}" alt="..." class="pImg"></p>
+                </div>
+            <div class="content">
+                    <h1> {{ place.name }}</h1>
+                    <h3>{{ place.description }}</h3>
+                    <p>{{ place.address }}</p>
+                    <p>{{ place.url }}</p>
 
-                <h1> {{ place.name }}</h1>
-                <h3>{{ place.description }}</h3>
-                <p>{{ place.address }}</p>
-                <p>{{ place.url }}</p>
-                {% if request.user in place.favourites.all %}
-                <a href="{% url 'remove_place' place.pk %}"> remove </a>
-                {% else %}
-                <a href="{% url 'add_place' place.pk %}"> add </a>
-                {% endif %}
+                    {% if request.user in place.favourites.all %}
+                    <a class="fav" href="{% url 'remove_place' place.pk %}"> REMOVE </a>
+                    {% else %}
+                    <a class="fav" href="{% url 'add_place' place.pk %}"> ADD </a>
+                    {% endif %}
+                </div>
             </div>
             <div class="image">
                 <img src="{{ place.images }}" class="center"/>

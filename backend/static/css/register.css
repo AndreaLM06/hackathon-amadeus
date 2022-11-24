@@ -1,0 +1,35 @@
+button {
+  margin-left: 470px;
+  margin-bottom: 80px;
+  margin-top: 80px;
+  border-radius: 8px;
+  border :none;
+  width: 100px;
+}
+
+form {
+  width: 80%;
+  margin-top: 50px;
+  margin-left: 250px;
+}
+
+label,
+input {
+  display: inline-block;
+}
+
+label {
+  width: 30%;
+  text-align: right;
+}
+
+label+input {
+  width: 15%;
+  margin: 0 30% 0 4%;
+  border-radius: 8px;
+  border: none;
+}
+
+input+input {
+  float: right;
+}

@@ -8,7 +8,7 @@
 <!-- ===========END SEO blocks=========== -->
 
 <!-- ===========Start CSS blocks=========== -->
-{% block extend_header %}{% endblock %}
+{% block extend_header %}<link href="{% static 'css/index.css' %}" rel="stylesheet">{% endblock %}
 <!-- ===========END CSS blocks=========== -->
 
 <!-- ===========Start script blocks=========== -->
@@ -17,20 +17,24 @@
 
 <!-- ===========Start Content=========== -->
 {% block content %}
-<section>
-    <div>
-        <h1>Hackathon Amadeus</h1>
+    <section>
+        <div class="center">
+        <form action="{% url 'search_results' %}" method="get">
+            <input id="Barre" name="q" type="text" placeholder="Search...">
+            <input id="Recherche" type="submit" value="Research...">
+        </form>
+        <div class="dropdown">
+       <button class="Filtres">Filters</button>
+        <div class="dropdown-content">
+            <a href="#">Visual</a>
+            <a href="#">Cognitive</a>
+            <a href="#">...</a>
+        </div>
+        </div>
+
     </div>
+    </section>
 
 
-    <form action="{% url 'search_results' %}" method="get">
-        <input name="q" type="text" placeholder="Search...">
-        <input type="submit" value="Search">
-    </form>
-
-    </div>
-</section>
-
-
-{% endblock %}<!-- ===========	End Content
-	================================= -->
+{% endblock %}<!-- ===========    End Content
+    ================================= -->

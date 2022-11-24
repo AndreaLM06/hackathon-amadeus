@@ -1,13 +1,42 @@
 <!-- templates/registration/register.html -->
-{% extends 'main/base.html' %} {% block title %}Sign Up{% endblock %}
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Sign Up{% endblock %}
+{% block extend_header %}
+    <link href="{% static 'css/register.css' %}" rel="stylesheet">
+{% endblock %}
 
 {% block content %}
 
-<h2>Sign up</h2>
-<form action="{% url 'register' %}" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" id="submit">Register</button>
-</form>
+    <form action="{% url 'register' %}" method="post">
+        {% csrf_token %}
+
+        <p>
+            <label for="id_lastname">Last name :</label>
+            <input type="text" name="lastname" maxlength="30" id="id_lastname">
+        </p>
+        <p>
+            <label for="id_firstname">First name :</label>
+            <input type="text" name="firstname" maxlength="30" id="id_firstname">
+        </p>
+
+        <p>
+            <label for="id_email">email :</label>
+            <input type="email" name="email" maxlength="254" required="" id="id_email">
+        </p>
+        <p>
+            <label for="id_username">pseudo :</label>
+            <input type="text" name="username" maxlength="150" autofocus="" required="" id="id_username">
+        </p>
+        <p>
+            <label for="id_password1">Password :</label>
+            <input type="password" name="password1" autocomplete="new-password" required="" id="id_password1">
+
+        <p>
+            <label for="id_password2">Confirm password :</label>
+            <input type="password" name="password2" autocomplete="new-password" required="" id="id_password2">
+        </p>
+        <button type="submit" id="submit">Submit</button>
+    </form>
 
 {% endblock content %}

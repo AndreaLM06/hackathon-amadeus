@@ -1,6 +1,5 @@
 {% extends 'main/base.html' %}
 {% load static %}
-
 <!-- ==========Start SEO blocks=========== -->
 {% block title %}Favourites{% endblock %}
 {% block decription %}{% endblock %}
@@ -8,7 +7,9 @@
 <!-- ==========END SEO blocks=========== -->
 
 <!-- ==========Start CSS blocks=========== -->
-{% block extend_header %}{% endblock %}
+{% block extend_header %}
+<link href="{% static 'css/search_result.css' %}" rel="stylesheet">
+{% endblock %}
 <!-- ==========END CSS blocks=========== -->
 
 <!-- ==========Start script blocks=========== -->

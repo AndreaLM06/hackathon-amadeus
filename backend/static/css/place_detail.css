@@ -1,0 +1,49 @@
+ /* Elements de recherche */
+ .col-md-8{
+     background-color:ghostwhite;
+     width: 1600px;
+     height: 600px;
+     opacity: 0.8;
+     text-align: right;
+     margin-top:5%;
+     color:black;
+
+     border: 2px solid black;
+
+ }
+
+
+ .col-md-8>a{
+     text-decoration: none;
+     color:black;
+     font-weight: bold;
+
+ }
+
+  .post>a{
+     text-decoration: none;
+      color:black;
+      font-weight: bold;
+      margin-left:15px;
+ }
+
+  .return{
+      padding-top : 10px;
+      margin: 20%;
+  }
+
+ .fav{
+      margin : 10%;
+  }
+
+.pImg{
+    width: 600px;
+    height: 350px;
+}
+.picture{
+    position: absolute;
+}
+
+.content{
+    margin:5%;
+}

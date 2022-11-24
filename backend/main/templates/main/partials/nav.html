@@ -1,4 +1,5 @@
 {% load static %}
+<link href="{% static 'css/nav.css' %}" rel="stylesheet">
 <!-- ===========Start Navigation Bar=========== -->
 <header>
     <div class="headerCol">
@@ -14,23 +15,25 @@
                         <div class="navCol">
                             <ul>
                                 {% if user.is_authenticated %}
-                                <li><a href="{%url 'home'%}">Home</a></li>
-                                <li>User: {{ user.username }}</li>
-                                <li>last: {{ user.email }}</li>
-                                <li><a href="{%url 'favourite_list'%}">Favorites</a></li>
-                                <li>
-                                    <a href="{% url 'logout' %}?next={{ request.path }}"
-                                    >Logout</a
-                                    >
-                                </li>
+
+                                    <li><a class="ParaMap" href="{% url 'home' %}">ParaMap</a></li>
+                                    <li style="margin-left: 550px; margin-top: 65px; color: white">User : {{ user.username }}</li>
+                                    <li style="float:right">
+                                        <a id="btnLogin" class="active" href="{% url 'favourite_list' %}">Favoris</a>
+                                    </li>
+                                    <li style="float:right">
+                                        <a id="btnSignUp" class="active" href="{% url 'logout' %}?next={{ request.path }}"
+                                        >Déconnexion</a
+                                        >
+                                    </li>
                                 {% else %}
-                                <li><a href="{%url 'home'%}">Home</a></li>
-                                <li>
-                                    <a href="{% url 'login' %}">Login</a>
-                                </li>
-                                <li>
-                                    <a href="{% url 'register' %}">Signup</a>
-                                </li>
+                                    <li><a class="ParaMap" href="{% url 'home' %}">ParaMap</a></li>
+                                    <li style="float:right">
+                                        <a id="btnLogin" class="active" href="{% url 'login' %}">Se connecter</a>
+                                    </li>
+                                    <li style="float:right">
+                                        <a id="btnSignUp" class="active" href="{% url 'register' %}">S'inscrire</a>
+                                    </li>
                                 {% endif %}
                             </ul>
                         </div>
