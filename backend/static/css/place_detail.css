@@ -26,7 +26,9 @@
  }
 
   .return{
-
+    width : 70px;
+    height : 35px;
+      margin-left : 30%;
   }
 
 .pImg{
@@ -42,6 +44,7 @@
 
 .content{
    text-align: center;
+
 }
 
 .content>h1{
@@ -62,4 +65,37 @@
      color:black;
     font-weight: bold;
     margin-left : 45%;
+}
+
+.adr{
+    text-decoration: none;
+     color:black;
+    font-weight: bold;
+    margin-left : 45%;
+}
+
+.desc{
+    text-decoration: none;
+     color:black;
+    font-weight: bold;
+    margin-left : 45%;
+}
+
+.name{
+    text-decoration: none;
+     color:black;
+    font-weight: bold;
+    margin-left : 45%;
+}
+
+.url{
+    text-decoration: none;
+     color:black;
+    font-weight: bold;
+    margin-left : 45%;
+}
+
+.fav{
+    width : 70px;
+    height : 35px;
 }
