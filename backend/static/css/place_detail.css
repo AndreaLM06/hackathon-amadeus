@@ -32,8 +32,8 @@
   }
 
 .pImg{
-    width: 600px;
-    height: 350px;
+    width: 900px;
+    height: 520px;
 
 }
 .picture{
@@ -48,15 +48,15 @@
 }
 
 .content>h1{
-    margin-left : 45%;
+    margin-left : 70%;
 }
 
 .content>h3{
-   margin-left : 45%;
+   margin-left : 70%;
 }
 
 .content>p{
-    margin-left : 45%;
+    margin-left : 70%;
     color : black;
 }
 
@@ -64,35 +64,35 @@
     text-decoration: none;
      color:black;
     font-weight: bold;
-    margin-left : 45%;
+    margin-left : 70%;
 }
 
 .adr{
     text-decoration: none;
      color:black;
     font-weight: bold;
-    margin-left : 45%;
+    margin-left : 70%;
 }
 
 .desc{
     text-decoration: none;
      color:black;
     font-weight: bold;
-    margin-left : 45%;
+    margin-left : 70%;
 }
 
 .name{
     text-decoration: none;
-     color:black;
+    color:black;
     font-weight: bold;
-    margin-left : 45%;
+    margin-left : 70%;
 }
 
 .url{
     text-decoration: none;
-     color:black;
+    color:black;
     font-weight: bold;
-    margin-left : 45%;
+    margin-left : 70%;
 }
 
 .fav{
