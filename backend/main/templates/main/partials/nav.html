@@ -17,20 +17,20 @@
                                     <li><a class="ParaMap" href="{% url 'home' %}">ParaMap</a></li>
                                     <li style="margin-left: 550px; margin-top: 65px; color: white">User : {{ user.username }}</li>
                                     <li style="float:right">
-                                        <a id="btnLogin" class="active" href="{% url 'favourite_list' %}">Favoris</a>
+                                        <a id="btnLogin" class="active" href="{% url 'favourite_list' %}">Farorite</a>
                                     </li>
                                     <li style="float:right">
                                         <a id="btnSignUp" class="active" href="{% url 'logout' %}?next={{ request.path }}"
-                                        >DÃ©connexion</a
+                                        >Log out</a
                                         >
                                     </li>
                                 {% else %}
                                     <li><a class="ParaMap" href="{% url 'home' %}">ParaMap</a></li>
                                     <li style="float:right">
-                                        <a id="btnLogin" class="active" href="{% url 'login' %}">Se connecter</a>
+                                        <a id="btnLogin" class="active" href="{% url 'login' %}">Log in</a>
                                     </li>
                                     <li style="float:right">
-                                        <a id="btnSignUp" class="active" href="{% url 'register' %}">S'inscrire</a>
+                                        <a id="btnSignUp" class="active" href="{% url 'register' %}">Sign up</a>
                                     </li>
                                 {% endif %}
                             </ul>

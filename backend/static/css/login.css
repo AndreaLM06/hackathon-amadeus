@@ -13,14 +13,23 @@ form {
   margin-left: 250px;
 }
 
+
 label,
 input {
   display: inline-block;
 }
 
 label {
+    color : ghostwhite;
+}
+
+label {
   width: 30%;
   text-align: right;
+}
+
+button{
+    margin-left:39%;
 }
 
 label+input {
