@@ -17,21 +17,28 @@
 
 <!-- ===========Start Content=========== -->
 {% block content %}
-<div class="content container">
+<div class="content container" id="place">
+ <link href="{% static 'css/place_detail.css' %}" rel="stylesheet">
     <div class="row">
         <div class="col-md-8">
-            <a href="{{ request.META.HTTP_REFERER }}" class="buw3-border w3-border-blue" class>Retour</a>
+        <a href="{{ request.META.HTTP_REFERER }}" ><img src="/images/backButton.png" alt="..." class="return"  ></a>
             <div class="post">
+                <div class="picture">
+                   <img src="{{ place.image.url }}" alt="..." class="pImg">
+                </div>
+            <div class="content" id="t">
+                    <h1 class="name"> {{ place.name }}</h1>
+                    <h3 class="desc">{{ place.description }}</h3>
+                    <p class="adr">{{ place.address }}</p>
+                    <p class="url"> {{ place.url }}</p>
 
-                <h1> {{ place.name }}</h1>
-                <h3>{{ place.description }}</h3>
-                <p>{{ place.address }}</p>
-                <p>{{ place.url }}</p>
-                {% if request.user in place.favourites.all %}
-                <a href="{% url 'remove_place' place.pk %}"> remove </a>
-                {% else %}
-                <a href="{% url 'add_place' place.pk %}"> add </a>
-                {% endif %}
+                    {% if request.user in place.favourites.all %}
+                        <a href="{% url 'remove_place' place.pk %}"><img src="/images/removeButton.png" alt="..." class="fav"></a>
+
+                    {% else %}
+                        <a href="{% url 'add_place' place.pk %}"><img src="/images/addButton.png" alt="..." class="fav" href="{% url 'add_place' place.pk %}"></a>
+                    {% endif %}
+                </div>
             </div>
             <div class="image">
                 <img src="{{ place.images }}" class="center"/>

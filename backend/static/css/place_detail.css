@@ -1,0 +1,101 @@
+ /* Elements de recherche */
+ .col-md-8{
+     background-color:ghostwhite;
+     width: 1600px;
+     height: 600px;
+     opacity: 0.8;
+     text-align: right;
+     margin-top:5%;
+     color:black;
+
+     border: 2px solid black;
+
+ }
+
+ .col-md-8>a{
+     text-decoration: none;
+     color:black;
+     font-weight: bold;
+ }
+
+  .post>a{
+     text-decoration: none;
+      color:black;
+      font-weight: bold;
+      margin-left:15px;
+ }
+
+  .return{
+    width : 70px;
+    height : 35px;
+      margin-left : 30%;
+  }
+
+.pImg{
+    width: 900px;
+    height: 520px;
+
+}
+.picture{
+    position: absolute;
+    opacity: 1;
+}
+
+
+.content{
+   text-align: center;
+
+}
+
+.content>h1{
+    margin-left : 70%;
+}
+
+.content>h3{
+   margin-left : 70%;
+}
+
+.content>p{
+    margin-left : 70%;
+    color : black;
+}
+
+.content>a{
+    text-decoration: none;
+     color:black;
+    font-weight: bold;
+    margin-left : 70%;
+}
+
+.adr{
+    text-decoration: none;
+     color:black;
+    font-weight: bold;
+    margin-left : 70%;
+}
+
+.desc{
+    text-decoration: none;
+     color:black;
+    font-weight: bold;
+    margin-left : 70%;
+}
+
+.name{
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+    margin-left : 70%;
+}
+
+.url{
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+    margin-left : 70%;
+}
+
+.fav{
+    width : 70px;
+    height : 35px;
+}

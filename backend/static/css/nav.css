@@ -1,0 +1,60 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    margin-top: 50px;
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.ParaMap {
+    margin-left: 50px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 10px #000;
+    font-family: "Arial";
+    border: none;
+}
+
+.ParaMap:hover{
+    color: white;
+    text-decoration: none;
+}
+
+
+li a:hover:not(.active) {
+    color: gray;
+}
+
+.active {
+    background-color: white;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 8px;
+    border :none;
+}
+
+#btnLogin {
+    margin-right: 60px;
+    width: 150px;
+    border-radius: 8px;
+    border :none;
+}
+
+#btnSignUp {
+    margin-right: 40px;
+    width: 150px;
+}

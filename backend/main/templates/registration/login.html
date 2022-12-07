@@ -1,23 +1,38 @@
+<!-- templates/registration/login.html -->
 {% extends 'main/base.html' %}
+{% load static %}
 {% block title %}Connexion{% endblock %}
+{% block extend_header %}
+    <link href="{% static 'css/login.css' %}" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
 
-{% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
-{% endif %}
+    {% if form.errors %}
+        <p>Your username and password didn't match. Please try again.</p>
+    {% endif %}
 
-{% if user.is_authenticated %}
-<p>Your account doesn't have access to this page. To proceed,
-    please login with an account that has access.</p>
-{% else %}
-<section id="login-form">
-    <form action="{% url 'login' %}" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" id="submit">Login</button>
-    </form>
-</section>
-{% endif %}
+    {% if user.is_authenticated %}
+        <p>Your account doesn't have access to this page. To proceed,
+            please login with an account that has access.</p>
+    {% else %}
+
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+
+            <p>
+                <label for="id_username">Email / Pseudo :</label>
+                <input type="text" name="username" maxlength="30" required id="username">
+            </p>
+            <p>
+                <label for="id_password">Password :</label>
+                <input type="password" name="password" maxlength="30" required id="id_password">
+            </p>
+
+            <button type="submit" id="submit">Sign in</button>
+        </form>
+
+    {% endif %}
 
 
-{% endblock %}
+{% endblock content%}

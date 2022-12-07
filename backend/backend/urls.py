@@ -1,8 +1,9 @@
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.auth.views import LogoutView
-from django.urls import include, path
+from django.urls import path
 from django.views.generic.base import TemplateView
-
 from main.views import LoginView, RegisterView, PlaceDetailView, PlaceView, SearchResultsView, FavouriteView, add_place, \
     remove_place
 
@@ -20,3 +21,6 @@ urlpatterns = [
     path('places/<int:pk>/remove', remove_place, name='remove_place'),
     path('favourites/', FavouriteView.as_view(), name='favourite_list'),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

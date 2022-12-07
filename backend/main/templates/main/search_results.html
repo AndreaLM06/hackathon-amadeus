@@ -1,6 +1,7 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
+
 <!-- ===========Start SEO blocks=========== -->
 {% block title %}Recherche{% endblock %}
 {% block decription %}{% endblock %}
@@ -17,7 +18,7 @@
 
 <!-- ===========Start Content=========== -->
 {% block content %}
-
+            <link href="{% static 'css/search_result.css' %}" rel="stylesheet">
 <h1>Search Results</h1>
 
 <div class="lightBg">
@@ -29,10 +30,15 @@
                     <div class="pCol">
                         <a href="{% url 'place_detail' slug=obj.slug %}">
                             <div class="pContent">
-                                <h3 class="mdTitle">{{ obj.name }}</h3>
-                                <p>{{ obj.address }}</p>
-                                <p>{{ obj.url }}</p>
-                                <p>{{ obj.description }}</p>
+                                <div class="picture">
+                                    <p><img src="{{ obj.image.url }}" alt="..." class="pImg"></p>
+                                </div>
+                                <div class="content">
+                                    <h3 class="mdTitle">{{ obj.name }}</h3>
+                                    <p>{{ obj.address }}</p>
+                                    <p>{{ obj.url }}</p>
+                                    <p>{{ obj.description }}</p>
+                                </div>
                             </div>
                         </a>
                     </div>
